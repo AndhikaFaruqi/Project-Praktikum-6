@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+      <title>Kurs Mata Uang Dunia</title>
+      <script>
+          function ganti(){
+              let x = Number(document.getElementById("bil1").value);
+              let y = Number(document.getElementById("bil2").value);
+              let z = x / y;
+              document.getElementById("bil3").value=z.toFixed(2);
+            }
+      </script>
+  </head>
+  <body>
+      <form id="frm1">
+          <label>Jumlah Nilai Rupiah</label>
+              <input type="text" id="bil1" value="0" onchange="ganti()"/>
+          <label>Mata Uang</label>
+              <select id="bil2" value="" onchange="ganti()">
+                 <option value="" >--Pilih--</option>
+                 <option value="10262" >Australian Dollar</option>
+                 <option value="14189" >Dollar</option>
+                 <option value="9915" >Dollar US</option>
+                 <option value="874" >Ringgit</option>
+                 <option value="16685" >Euro</option>
+               </select>   
+          <label>Total Nilai</label>
+          <input type="text" id="bil3" value="0"/>
+      </form>
+  </body>
+</html>

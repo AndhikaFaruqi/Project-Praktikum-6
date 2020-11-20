@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox Message</title>
+</head>
+<body>
+    <style type="text/css"></style>
+    <div class="container">
+        <button class="btn btn-info btn-chat" type="button" onclick="openchat()">Chat</button>
+        <div class="chatbox" id="chatbox">
+            <h2>Message</h2>
+            <form class="form-container">
+                <textarea type="text" placeholder="Type Text.." name="msg" required=""></textarea>
+                <button type="submit" class="btn btn-info btn-lg btn-send">Send</button>
+                <button type="button" class="btn btn-danger btn-lg btn-close" onclick="closeChat()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+       function openchat() {
+           document.getElementById('chatbox').style.display='block';
+           $('.btn-chat').hide();
+       }
+       function closeChat() {
+           document.getElementById('chatbox').style.display='none';
+           $('.btn-chat').show();
+       }
+       $('form').submit(function() {
+           var text=$(this).find("textarea[name'msg']").val();
+           
+           alert(text);
+       });
+    </script>
+</body>
+</html>
